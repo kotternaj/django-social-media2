@@ -36,7 +36,7 @@ class UserPosts(generic.ListView): # connecting posts to user they belong to
 
 class PostDetail(SelectRelatedMixin, generic.DetailView):
     model = models.Post
-    selected_related = ('user', group)
+    selected_related = ('user', 'group')
     
     def get_queryset(self):
         queryset = super().get_queryset()
